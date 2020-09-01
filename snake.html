@@ -1,0 +1,167 @@
+<!DOCTYPE HTML>
+<!--
+	Monochromed by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Lucas Sena Zuza</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+	</head>
+	<body>
+
+	<!-- Header -->
+		<div id="header">
+			<div class="container">
+					
+				<!-- Logo -->
+					<div id="logo">
+						<h1><a href="#">Lucas Sena Zuza</a></h1>
+						<span>Engenheiro e entusiasta por novas tecnologias</span>
+					</div>
+				
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html">Sobre</a></li>
+
+						<li><a href="projectiot.html">Projetos IoT</a></li>
+						<li><a href="projectsw.html">Projetos Software</a></li>
+						<li><a href="snake.html">Jogo da Cobrinha</a></li>
+					</ul>
+				</nav>
+
+			</div>
+		</div>
+	<!-- Header -->
+			
+	<!-- Main -->
+		<div id="main">
+			<div class="container">
+				<div class="row">
+
+					<!-- Content -->
+						<canvas id="stage" width="600" height="400" ></canvas>
+						<script type="text/javascript">
+							window.onload = function () {
+					
+								var stage = document.getElementById('stage');
+								var ctx = stage.getContext("2d");
+								document.addEventListener("keydown",keyPush);
+								setInterval(game, 60);
+								const vel = 1;
+								var vx = vy = 0;
+								var px = py = 10;
+								var tp = 20; // tamanho quadradinho
+								var qp = 20;
+								var ax = 15;
+								var ay = 10;
+								var trail = [];
+								tail = 5;
+					
+								function game() {
+									px += vx;
+									py += vy;
+									if (px < 0) {
+										px = qp - 1;
+									}
+									if (px > qp - 1) {
+										px = 0;
+									}
+									if (py < 0) {
+										py = qp - 1;
+					
+									}
+									if (py > qp - 1) {
+										py = 0;
+									}
+									ctx.fillStyle = "black";
+									ctx.fillRect(0, 0, stage.width, stage.height);
+									ctx.fillStyle = "red";
+									ctx.fillRect(ax*tp,ay*tp,tp,tp);
+									ctx.fillStyle = "gray";
+									for (var i = 0; i < trail.length; i++) {
+										ctx.fillRect(trail[i].x*tp, trail[i].y*tp, tp-1, tp-1);
+										if (trail[i].x == px && trail[i].y == py) {
+											vx = vy = 0;
+											tail=5;
+										}
+					
+									}
+									trail.push({ x: px, y: py })
+									while (trail.length > tail) {
+										trail.shift();
+									}
+									if ((ax == px) && (ay == py)) {
+										tail++;
+										ax = Math.floor(Math.random()*qp);
+										ay = Math.floor(Math.random()*qp);
+									}
+					
+								}
+								function keyPush(event){
+									switch(event.keyCode){
+										case 37: //left
+										 vx = -vel;
+										 vy = 0;
+										 break;
+										 case 38: //up
+										 vx = 0;
+										 vy = -vel;
+										 break;
+										 case 39: //right
+										 vx = vel;
+										 vy = 0;
+										 break;
+										 case 40: //down
+										 vx = 0;
+										 vy = vel;
+										 break;
+										 default:
+											 break;
+					
+					
+									}
+								}
+					
+					
+							}
+					
+						</script>
+						
+				</div>
+			
+			</div>
+		</div>
+		<!-- Main -->
+
+	<!-- Footer -->
+	
+	<!-- Footer -->
+
+	<!-- Copyright -->
+	<div id="copyright">
+		<div class="container">
+		<i>Lucas Sena Zuza - 2020</i>
+		</div>
+	</div>
+
+</body>
+</html>
