@@ -5,87 +5,145 @@
     Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
 <html>
-	<head>
-		<title>Lucas Sena Zuza</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
-		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
-		
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script src="js/skel.min.js"></script>
-		<script src="js/skel-panels.min.js"></script>
-		<script src="js/init.js"></script>
-		<noscript>
-			<link rel="stylesheet" href="css/skel-noscript.css" />
-			<link rel="stylesheet" href="css/style.css" />
-		</noscript>
-		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
-	</head>
-	<body>
+
+<head>
+	<title>Lucas Sena Zuza</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+	<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/skel.min.js"></script>
+	<script src="js/skel-panels.min.js"></script>
+	<script src="js/init.js"></script>
+	<noscript>
+		<link rel="stylesheet" href="css/skel-noscript.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</noscript>
+	<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+</head>
+
+<body>
 
 	<!-- Header -->
-		<div id="header">
-			<div class="container">
-					
-				<!-- Logo -->
-					<div id="logo">
-						<h1><a href="#">Lucas Sena Zuza</a></h1>
-						<span>Engenheiro e entusiasta por novas tecnologias</span>
+	<div id="header">
+		<div class="container">
+
+			<!-- Logo -->
+			<div id="logo">
+				<h1><a href="#">Lucas Sena Zuza</a></h1>
+				<span>Engenheiro e entusiasta por novas tecnologias</span>
+			</div>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="index.html">Sobre</a></li>
+
+					<li><a href="projectiot.html">Projetos IoT</a></li>
+					<li><a href="projectsw.html">Projetos Software</a></li>
+					<li><a href="snake.html">Jogo da Cobrinha</a></li>
+				</ul>
+			</nav>
+
+		</div>
+	</div>
+	<!-- Header -->
+
+	<!-- Main -->
+	<div id="main">
+		<div class="container">
+			<div class="row">
+
+				<!-- Content -->
+				<div id="content" class="12u skel-cell-important">
+					<section>
+						<header>
+							<h2>Projetos de Software</h2>
+							<span class="byline"><i>Descobrindo o mundo</i></span>
+						</header>
+
+
+						<p><a href="#" class="image full"><img src="images/mountain.jpg" style="height: 300px;"
+									alt=""></a></p>
+						<p>	Um dos projetos que estive envolvido, foi feito estudo e aplicação de reconhecimento de
+							produtos por imagens. Para isso, usei a linguagem de progra
+							mação Python aliada com o Algoritmo Yolo junto ao framework <a
+								href="https://pjreddie.com/darknet/yolo/">Darknet</a>. O processo de treinamento dos
+							produtos foi a parte mais trabalhosa, pois para treinamentod
+							de algoritmos com redes neurais, temos que ensinar nossa rede do que consiste os produtos
+							que queremos reconher. No caso, foi necessário a marcação dos produtos em mais de 100 fotos.
+							Feito o Treinamento, foi hora de testar o algoritmo. Na foto abaixo temos do primeiro teste
+							feito na Gôndola de produtos. A câmera foi inicialmente posicionada do lado
+							de fora, e o resultado foi bem postivo.
+					</section>
+					<div class="img-sub">
+						<figure>
+							<p><img src="images/img4.jpg" alt="Cameras geladeira">
+							<figcaption>Primeiro Teste do Algoritmo Yolo</i></figcaption>
+							</p>
+						</figure>
 					</div>
-				
-				<!-- Nav -->
-				<nav id="nav">
-					<ul>
-						<li><a href="index.html">Sobre</a></li>
 
-						<li><a href="projectiot.html">Projetos IoT</a></li>
-						<li><a href="projectsw.html">Projetos Software</a></li>
-						<li><a href="snake.html">Jogo da Cobrinha</a></li>
-					</ul>
-				</nav>
 
-			</div>
-		</div>
-	<!-- Header -->
-			
-	<!-- Main -->
-		<div id="main">
-			<div class="container">
-				<div class="row">
+					<p>Por motivos de adequação com a realidade, o treinmento foi refeito, só que agora com a câmera
+						dentro
+						da gôndola. Dessa vez, foram usadas mais de 150 imagens. Feitas as demarcações e rodado o
+						treinamento,
+						o resultado abaixo foi obtido. A taxa de acerto do algoritmo para a situação chegou a 90%.</p>
 
-					<!-- Content -->
-						<div id="content" class="12u skel-cell-important">
-							<section>
-								<header>
-									<h2>Projetos de Software</h2>
-									<span class="byline"><i>Descobrindo o mundo</i></span>
-								</header>
-								<p><a href="#" class="image full"><img src="images/mountain.jpg" style="height: 300px;" alt=""></a></p>
-								<p>Maecenas pede nisl, elementum eu, ornare ac, malesuada at, erat. Proin gravida orci porttitor enim accumsan lacinia. Donec condimentum, urna non molestie semper, ligula enim ornare nibh, quis laoreet eros quam eget ante. Aliquam libero. Vivamus nisl nibh, iaculis vitae, viverra sit amet, ullamcorper vitae, turpis. Aliquam erat volutpat. Vestibulum dui sem, pulvinar sed, imperdiet nec, iaculis nec, leo. Fusce odio. Etiam arcu dui, faucibus eget, placerat vel, sodales eget, orci. Donec ornare neque ac sem. Mauris aliquet. Aliquam sem leo, vulputate sed, convallis at, ultricies quis, justo. Donec nonummy magna quis risus. Quisque eleifend. Phasellus tempor vehicula justo.</p>
-				elementum ut, vestibulum eu, facilisis quis, arcu. Mauris a dolor. Nulla facilisi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed blandit. Phasellus pellentesque, ante nec iaculis dapibus, eros justo auctor lectus, a lobortis lorem mauris quis nunc. Praesent pellentesque facilisis elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. In hac habitasse platea dictumst. Nullam id ante eget dui vulputate aliquam. Pellentesque erat erat, tincidunt in, eleifend accumsan, malesuada eget, augue. Suspendisse sit amet tellus in eros bibendum condimentum. Vestibulum suscipit volutpat nulla. Phasellus pellentesque, ante nec iaculis dapibus, eros justo auctor lectus, a lobortis lorem mauris quis nunc. Praesent pellentesque facilisis elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Pellentesque pede. Donec pulvinar ullamcorper metus. In eu odio at lectus pulvinar mollis.</p>
-							</section>
-						</div>
-						<p><a href="#" class="image half-full"><img src="images/img3.jpg" alt="Sistema IoT trava"></a></p>
-					<p><a href="#" class="image half-full"><img src="images/img4.jpg" alt="Cameras geladeira"></a></p>
-					<!-- /Content -->
-						
+					<div class="img-sub">
+						<figure>
+							<p><img src="images/sw2.jpeg" style="height: 80%; width: 80%;" alt="Cameras geladeira">
+							<figcaption>Segundo Teste com Yolo e Darknet</i></figcaption>
+							</p>
+						</figure>
+					</div>
+					<p>Mesmo com os produtos fora de ordem, o algoritmo se mostrou bem funcional</p>
+					<div class="img-sub">
+						<figure>
+							<p><img src="images/img3.jpg" style="height: 80%; width: 80%;" alt="Cameras geladeira">
+							<figcaption><i>Produtos Desorganizados</i></figcaption>
+							</p>
+						</figure>
+					</div>
+
 				</div>
-			
-			</div>
-		</div>
-	<!-- Main -->
 
+			</div>
+
+		</div>
+	</div>
+	<!-- Main -->
 
 	<!-- Copyright -->
 	<div id="copyright">
 		<div class="container">
-		<i>Lucas Sena Zuza - 2020</i>
+			<div class="row">
+				<div class="col-md-3">
+					<i>Uberlândia - Lucas Sena Zuza - 2020</i>
+				</div>
+
+				<div class="col-md-3">
+	<p><i>"O Homem que move montanhas, começa pelas pequenas pedras - Confúcio"</i></p>
+				</div>
+				<div class="col-md-3">
+					<ul>
+						<li><i class="fa fa-github" style="font-size:24px"></i><a href="https://github.com/lucassenazuza">/lucassenazuza</a></li>
+						<li><i class="fa fa-linkedin-square" style="font-size:24px"></i><a href="https://www.linkedin.com/in/lucas-sena-zuza/">/lucas-sena-zuza</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+	
+				</div>
+	
 		</div>
 	</div>
 
 </body>
+
 </html>
