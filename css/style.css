@@ -55,7 +55,13 @@
 		padding: 25px;
 
 	}
-
+  .video-class{
+	justify-content: center;
+	text-align: center;
+	display: flex;
+	margin-top: 10px;
+	margin-bottom:10px;
+  }
 	figure {
 		
 		width: 75%;
@@ -214,9 +220,11 @@
 			}
 			.image.half-full
 			{
-				display: block;
 				width: 60%;
-				margin: 0 0 2em 5em;
+				/* margin: 0 0 2em 5em; */
+				justify-content: center;
+				display: flex;
+				align-items: center;
 
 			}
 			
